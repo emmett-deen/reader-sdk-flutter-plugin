@@ -49,11 +49,19 @@ def READER_SDK_VERSION = '1.5.1'
 android {
     compileSdkVersion 32
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 32
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
+        resolutionStrategy {
+            force 'androidx.core:core-ktx:1.6.0'
+        }
     }
     lintOptions {
         disable 'InvalidPackage'
