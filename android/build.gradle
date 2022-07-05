@@ -59,9 +59,6 @@ android {
         targetSdkVersion 32
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
-        resolutionStrategy {
-            force 'androidx.core:core-ktx:1.6.0'
-        }
     }
     lintOptions {
         disable 'InvalidPackage'
@@ -79,4 +76,5 @@ dependencies {
     implementation "com.google.android.gms:play-services-base:$playServicesBaseVersion"
     api "com.squareup.sdk.reader:reader-sdk-$SQUARE_READER_SDK_APPLICATION_ID:$readerSdkVersion"
     runtimeOnly "com.squareup.sdk.reader:reader-sdk-internals:$readerSdkVersion"
+    implementation "androidx.core:core-ktx:1.6.0"
 }
